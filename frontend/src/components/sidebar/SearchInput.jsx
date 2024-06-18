@@ -26,15 +26,18 @@ const SearchInput = () => {
     } else toast.error("No such user found!");
   };
   return (
-    <form onSubmit={handleSubmit} className="flex items-center gap-2">
+    <form onSubmit={handleSubmit} className="flex items-center gap-2 ">
       <input
         type="text"
         placeholder="Search…"
-        className="input input-bordered rounded-full"
+        className="input rounded-full bg-white border border-white text-black"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button type="submit" className="btn btn-circle bg-sky-500 text-white">
+      <button
+        type="submit"
+        className="btn btn-circle bg-white border border-white text-black hover:bg-gray-200"
+      >
         <IoSearchSharp className="w-6 h-6 outline-none" />
       </button>
     </form>
